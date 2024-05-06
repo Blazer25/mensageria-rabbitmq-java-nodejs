@@ -4,11 +4,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Classe do serviço do RabbitMQ.
- * <br>
- * Responsável por: enviar as mensagens.
  */
 @Service
 public class RabbitMQServico {
@@ -27,11 +27,24 @@ public class RabbitMQServico {
     public void enviarMensagem(String nomeFila, Object mensagem) {
         try {
             String msgJSON = this.objectMapper.writeValueAsString(mensagem);
-            System.out.println(msgJSON);
             this.rabbitTemplate.convertAndSend(nomeFila, msgJSON);
+            System.out.println(retornarDataHoraAtual() + " Mensagem enviada...");
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Retorna a data e hora atual formatada como uma string.
+     *
+     * @return Uma string contendo a data e hora atual no formato "dd/MM/yyyy HH:mm:ss".
+     */
+    public String retornarDataHoraAtual() {
+        LocalDateTime agora = LocalDateTime.now();
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String dataHoraFormatada = agora.format(formato);
+
+        return dataHoraFormatada;
     }
 
 }
