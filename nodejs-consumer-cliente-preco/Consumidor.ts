@@ -1,10 +1,14 @@
 import { connect } from "amqplib/callback_api";
 import * as fs from "fs";
 
-const fila: string = "PRECO";
-const caminhoArquivo: string = "dados.json";
-
+/**
+ * Salva mensagens em um arquivo JSON.
+ * @param {any[]} dadosNovos - Os dados a serem adicionados ao arquivo JSON.
+ * @returns {void}
+ */
 function salvarMensagens(dadosNovos: any[]): void {
+  const caminhoArquivo: string = "dados.json";
+
   if (fs.existsSync(caminhoArquivo)) {
     const dadosJSON = fs.readFileSync(caminhoArquivo, "utf8");
     const dados = JSON.parse(dadosJSON || "{}");
@@ -35,7 +39,13 @@ function salvarMensagens(dadosNovos: any[]): void {
   }
 }
 
+/**
+ * Conecta ao RabbitMQ e consome mensagens da fila de PRECO.
+ * @returns {void}
+ */
 function conectar(): void {
+  const fila: string = "PRECO";
+
   console.log("Conectando ao RabbitMQ...");
 
   connect(
