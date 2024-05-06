@@ -14,7 +14,9 @@ public class ConsumidorEstoque {
     private void consumidor(String mensagem) throws JsonProcessingException, InterruptedException {
         EstoqueDTO estoqueDTO = new ObjectMapper().readValue(mensagem, EstoqueDTO.class);
 
-        System.out.println("Código do produto: " + estoqueDTO.codigoProduto);
+        System.out.println("Mensagem recebida...");
+        
+        System.out.println("Produto: " + estoqueDTO.codigoProduto);
         System.out.println("Quantidade: " + estoqueDTO.quantidade);
         System.out.println("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨");
 
