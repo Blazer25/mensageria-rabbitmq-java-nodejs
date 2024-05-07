@@ -28,6 +28,15 @@ public class EstoqueController {
      */
     @PutMapping
     private ResponseEntity alterarEstoque(@RequestBody EstoqueDTO estoqueDTO) {
+
+        try {
+//            estoqueDTO.validarQuantidade();
+//            estoqueDTO.validarCodigoProduto();
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("Erro ao validar quantidade: " + e.getMessage());
+        }
+
         final String NOME_FILA_ESTOQUE = RabbitMQConsts.FILA_ESTOQUE;
         this.rabbitMQServico.enviarMensagem(NOME_FILA_ESTOQUE, estoqueDTO);
         return new ResponseEntity(HttpStatus.OK);
