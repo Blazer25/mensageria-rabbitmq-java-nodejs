@@ -25,12 +25,17 @@ public class PrecoController {
      * Método para alterar o preço de um produto.
      *
      * @param precoDTO O objeto PrecoDTO contendo os dados de preço a serem alterados.
-     * @return ResponseEntity com status HTTP OK se a operação for bem-sucedida.
+     * @return ResponseEntity com status HTTP OK se a operação for bem-sucedida ou erros de validação.
      */
     @PutMapping
     private ResponseEntity alterarPreco(@RequestBody PrecoDTO precoDTO) {
-        final String NOME_FILA_PRECO = RabbitMQConsts.FILA_PRECO;
-        this.rabbitMQServico.enviarMensagem(NOME_FILA_PRECO, precoDTO);
-        return new ResponseEntity(HttpStatus.OK);
+        try {
+            precoDTO.validar();
+            final String NOME_FILA_PRECO = RabbitMQConsts.FILA_PRECO;
+            this.rabbitMQServico.enviarMensagem(NOME_FILA_PRECO, precoDTO);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
     }
 }
