@@ -27,8 +27,8 @@ public class ConsumidorEstoque {
 
         System.out.println(retornarDataHoraAtual() + " Mensagem recebida...");
 
-        System.out.println("Produto: " + estoqueDTO.codigoProduto);
-        System.out.println("Quantidade: " + estoqueDTO.quantidade);
+        System.out.println("Produto: " + estoqueDTO.getCodigoProduto());
+        System.out.println("Quantidade: " + estoqueDTO.getQuantidade());
         System.out.println("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨");
     }
 
