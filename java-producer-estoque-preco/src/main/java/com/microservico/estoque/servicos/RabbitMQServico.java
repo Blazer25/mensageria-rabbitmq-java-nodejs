@@ -45,9 +45,9 @@ public class RabbitMQServico {
     }
 
     /**
-     * Retorna a data e hora atual formatada como uma string.
-     *
-     * @return Uma string contendo a data e hora atual no formato "dd/MM/yyyy HH:mm:ss".
+     * Envia uma mensagem para a fila morta do RabbitMQ.
+     * 
+     * @param mensagem A mensagem a ser enviada para a fila morta.
      */
     private void enviarParaFilaMorta(String mensagem) {
         try {
@@ -58,6 +58,11 @@ public class RabbitMQServico {
         }
     }
 
+    /**
+     * Retorna a data e hora atual formatada como uma string.
+     *
+     * @return Uma string contendo a data e hora atual no formato "dd/MM/yyyy HH:mm:ss".
+     */
     public String retornarDataHoraAtual() {
         LocalDateTime agora = LocalDateTime.now();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
