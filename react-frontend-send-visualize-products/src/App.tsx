@@ -42,13 +42,13 @@ function App() {
     <div className="container">
       {errorComNome && <p>{errorComNome}</p>}
       <div>
-        <span>Produtos com nome</span>
+        <h2>Produtos com nome</h2>
         {produtosComNome && <CardProduto produtos={produtosComNome} />}
         {!produtosComNome?.length && <p>Nenhum produto com nome encontrado</p>}
       </div>
       {errorSemNome && <p>{errorSemNome}</p>}
       <div>
-        <span>Produtos sem nome</span>
+        <h2>Produtos sem nome</h2>
         {produtosSemNome && <CardProduto produtos={produtosSemNome} />}
         {!produtosSemNome?.length && <p>Nenhum produto sem nome encontrado</p>}
       </div>
