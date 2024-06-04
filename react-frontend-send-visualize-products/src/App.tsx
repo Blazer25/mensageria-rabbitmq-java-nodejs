@@ -1,31 +1,56 @@
-// import { useState } from 'react'
+import { useEffect } from "react";
 import "./App.css";
 import CardProduto from "./components/CardProduto";
-
-const teste = [
-  {
-    id: "9018d5df-d43a-4c61-ad71-84da1ca9ec66",
-    nome: "teste1",
-    preco: 10,
-  },
-  {
-    id: "9018d5df-d43a-4c61-ad71-84da1ca9ec66",
-    nome: "",
-    preco: 20,
-  },
-];
+import { useFetch } from "./hooks/useFetch";
+import { Produto, ProdutoSemNome } from "./types";
 
 function App() {
+  const {
+    data: produtosComNome,
+    error: errorComNome,
+    refetch: refetchProdutosComNome,
+  } = useFetch<Produto[]>("http://localhost:4000/produtos");
+  const {
+    data: produtosSemNome,
+    error: errorSemNome,
+    refetch: refetchProdutosSemNome,
+  } = useFetch<ProdutoSemNome[]>("http://localhost:4000/produtos-sem-nome");
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        refetchProdutosComNome();
+        refetchProdutosSemNome();
+      }
+    };
+
+    const handleFocus = () => {
+      refetchProdutosComNome();
+      refetchProdutosSemNome();
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("focus", handleFocus);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("focus", handleFocus);
+    };
+  }, [refetchProdutosComNome, refetchProdutosSemNome]);
+
   return (
     <div className="container">
+      {errorComNome && <p>{errorComNome}</p>}
       <div>
         <span>Produtos com nome</span>
-        <CardProduto produtos={teste} />
+        {produtosComNome && <CardProduto produtos={produtosComNome} />}
+        {!produtosComNome?.length && <p>Nenhum produto com nome encontrado</p>}
       </div>
+      {errorSemNome && <p>{errorSemNome}</p>}
       <div>
         <span>Produtos sem nome</span>
-
-        <CardProduto produtos={teste} />
+        {produtosSemNome && <CardProduto produtos={produtosSemNome} />}
+        {!produtosSemNome?.length && <p>Nenhum produto sem nome encontrado</p>}
       </div>
     </div>
   );

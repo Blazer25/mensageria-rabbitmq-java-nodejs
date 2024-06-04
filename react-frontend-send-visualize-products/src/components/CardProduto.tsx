@@ -1,14 +1,9 @@
-import React from "react";
 import "./CardProduto.css";
-
-interface Produto {
-  id: string;
-  nome: string;
-  preco: number;
-}
+import React from "react";
+import { Produto, ProdutoSemNome } from "../types";
 
 interface CardProdutoProps {
-  produtos: Produto[];
+  produtos: (Produto | ProdutoSemNome)[];
 }
 
 function retornarValorComDuasCadasDecimais(valor: number): string {
@@ -17,15 +12,15 @@ function retornarValorComDuasCadasDecimais(valor: number): string {
 
 const CardProduto: React.FC<CardProdutoProps> = ({ produtos }) => {
   return (
-    <div>
-      {produtos.map((item) => (
-        <div className="card" key={item.id}>
-          <p>{item.id}</p>
-          {item.nome && <p>{item.nome}</p>}
-          <p>R$ {retornarValorComDuasCadasDecimais(item.preco)}</p>
+    <>
+      {produtos.map((produto) => (
+        <div className="card" key={produto.codigoProduto}>
+          <p>{produto.codigoProduto}</p>
+          {"nome" in produto && <p>{produto.nome}</p>}
+          <p>R$ {retornarValorComDuasCadasDecimais(produto.preco)}</p>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
