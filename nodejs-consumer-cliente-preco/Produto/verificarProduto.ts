@@ -6,7 +6,7 @@ import { alterarProduto } from "./alterarProduto";
  * Interface para representar um produto.
  */
 interface Produto {
-  id: string;
+  codigoProduto: string;
   nome: string;
   preco: number;
 }
@@ -36,7 +36,7 @@ export function verificarProduto(produtoSemNome: ProdutoSemNome): void {
 
   // Encontra o índice do produto com o ID fornecido
   const indexProduto = dadosProdutos.findIndex(
-    (produto: Produto) => produto.id === produtoSemNome.codigoProduto
+    (produto: Produto) => produto.codigoProduto === produtoSemNome.codigoProduto
   );
 
   // Se o produto não for encontrado, salva o novo produto

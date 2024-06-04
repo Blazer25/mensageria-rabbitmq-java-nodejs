@@ -1,201 +1,201 @@
 [
   {
-    "id": "1f8b657e-9df9-4e12-8b28-474b6c653163",
+    "codigoProduto": "1f8b657e-9df9-4e12-8b28-474b6c653163",
     "nome": "Produto 1",
     "preco": 1000
   },
   {
-    "id": "a7c84e4f-ff11-44fc-bc26-d8a842451b63",
+    "codigoProduto": "a7c84e4f-ff11-44fc-bc26-d8a842451b63",
     "nome": "Produto 2",
     "preco": 53.24
   },
   {
-    "id": "2a6cb9f3-736f-4d7d-8589-3e8ebcc52b67",
+    "codigoProduto": "2a6cb9f3-736f-4d7d-8589-3e8ebcc52b67",
     "nome": "Produto 3",
     "preco": 62.87
   },
   {
-    "id": "c5c755e0-d2cf-4d3a-9073-7dcaed6be06e",
+    "codigoProduto": "c5c755e0-d2cf-4d3a-9073-7dcaed6be06e",
     "nome": "Produto 4",
     "preco": 47.94
   },
   {
-    "id": "5649f21b-fb0d-4737-8f68-f19a482379de",
+    "codigoProduto": "5649f21b-fb0d-4737-8f68-f19a482379de",
     "nome": "Produto 5",
     "preco": 101.47
   },
   {
-    "id": "f4296c3f-6477-4b02-b2aa-4d6d2bfc13c3",
+    "codigoProduto": "f4296c3f-6477-4b02-b2aa-4d6d2bfc13c3",
     "nome": "Produto 6",
     "preco": 92.16
   },
   {
-    "id": "afff4f4e-8e95-40c8-9a35-568cde3e6d38",
+    "codigoProduto": "afff4f4e-8e95-40c8-9a35-568cde3e6d38",
     "nome": "Produto 7",
     "preco": 85.63
   },
   {
-    "id": "05d1744e-9276-4098-a444-7f926a2d5786",
+    "codigoProduto": "05d1744e-9276-4098-a444-7f926a2d5786",
     "nome": "Produto 8",
     "preco": 76.43
   },
   {
-    "id": "b7a2fdf2-8f92-42d0-8c36-95f6b5f39124",
+    "codigoProduto": "b7a2fdf2-8f92-42d0-8c36-95f6b5f39124",
     "nome": "Produto 9",
     "preco": 44.97
   },
   {
-    "id": "c067f1da-23f3-4c1b-94d3-92c20b46db40",
+    "codigoProduto": "c067f1da-23f3-4c1b-94d3-92c20b46db40",
     "nome": "Produto 10",
     "preco": 110.25
   },
   {
-    "id": "3c8a7f11-7fd0-4e01-9bb5-4d7553f0e75f",
+    "codigoProduto": "3c8a7f11-7fd0-4e01-9bb5-4d7553f0e75f",
     "nome": "Produto 11",
     "preco": 35.67
   },
   {
-    "id": "e5be6cc7-8f7e-4b7b-92d2-55e73f1ad451",
+    "codigoProduto": "e5be6cc7-8f7e-4b7b-92d2-55e73f1ad451",
     "nome": "Produto 12",
     "preco": 65.89
   },
   {
-    "id": "d4c8721c-fc39-48c3-b178-e548a4bcb26b",
+    "codigoProduto": "d4c8721c-fc39-48c3-b178-e548a4bcb26b",
     "nome": "Produto 13",
     "preco": 123.45
   },
   {
-    "id": "e02a3e9e-0468-4697-a24c-8f3b31bfa396",
+    "codigoProduto": "e02a3e9e-0468-4697-a24c-8f3b31bfa396",
     "nome": "Produto 14",
     "preco": 22.35
   },
   {
-    "id": "7ec23384-d1cb-421a-9cb0-714a52ac4a88",
+    "codigoProduto": "7ec23384-d1cb-421a-9cb0-714a52ac4a88",
     "nome": "Produto 15",
     "preco": 108.77
   },
   {
-    "id": "5ad03d1f-2a2e-40f8-b4e7-d37b758a68db",
+    "codigoProduto": "5ad03d1f-2a2e-40f8-b4e7-d37b758a68db",
     "nome": "Produto 16",
     "preco": 113.12
   },
   {
-    "id": "88365c9b-4581-4b54-a25e-3c44b634f137",
+    "codigoProduto": "88365c9b-4581-4b54-a25e-3c44b634f137",
     "nome": "Produto 17",
     "preco": 78.56
   },
   {
-    "id": "c0b4d2b4-59b1-48f6-99b7-3a3f84074d96",
+    "codigoProduto": "c0b4d2b4-59b1-48f6-99b7-3a3f84074d96",
     "nome": "Produto 18",
     "preco": 81.22
   },
   {
-    "id": "c8f1fa57-2179-4c5c-a109-ff454bd9174b",
+    "codigoProduto": "c8f1fa57-2179-4c5c-a109-ff454bd9174b",
     "nome": "Produto 19",
     "preco": 104.75
   },
   {
-    "id": "7dc00c04-d8d5-4be8-81f7-b8dce5a33de4",
+    "codigoProduto": "7dc00c04-d8d5-4be8-81f7-b8dce5a33de4",
     "nome": "Produto 20",
     "preco": 55.65
   },
   {
-    "id": "f1776b8c-662e-4d89-8152-c2c0d54f3c83",
+    "codigoProduto": "f1776b8c-662e-4d89-8152-c2c0d54f3c83",
     "nome": "Produto 21",
     "preco": 25.44
   },
   {
-    "id": "4042e86a-5225-4bc1-8ff5-50df58bb34fa",
+    "codigoProduto": "4042e86a-5225-4bc1-8ff5-50df58bb34fa",
     "nome": "Produto 22",
     "preco": 59.98
   },
   {
-    "id": "bf60e95e-0c24-4019-9363-4bcd5b55ef44",
+    "codigoProduto": "bf60e95e-0c24-4019-9363-4bcd5b55ef44",
     "nome": "Produto 23",
     "preco": 83.47
   },
   {
-    "id": "9240c8c2-193d-46b7-8891-1d1c7e8128c5",
+    "codigoProduto": "9240c8c2-193d-46b7-8891-1d1c7e8128c5",
     "nome": "Produto 24",
     "preco": 91.88
   },
   {
-    "id": "ea004748-1e92-4b02-9f42-8c65c5a667b8",
+    "codigoProduto": "ea004748-1e92-4b02-9f42-8c65c5a667b8",
     "nome": "Produto 25",
     "preco": 33.58
   },
   {
-    "id": "802c4dd9-64e7-4d1f-9788-e8c43d42e7f4",
+    "codigoProduto": "802c4dd9-64e7-4d1f-9788-e8c43d42e7f4",
     "nome": "Produto 26",
     "preco": 114.99
   },
   {
-    "id": "b2dcd04a-637e-43e0-bb18-1b1f015a964e",
+    "codigoProduto": "b2dcd04a-637e-43e0-bb18-1b1f015a964e",
     "nome": "Produto 27",
     "preco": 120.12
   },
   {
-    "id": "c7b4e998-cdfd-4384-86f2-e9cb9b3dbd18",
+    "codigoProduto": "c7b4e998-cdfd-4384-86f2-e9cb9b3dbd18",
     "nome": "Produto 28",
     "preco": 11.37
   },
   {
-    "id": "87dc43ae-2e64-4d82-835a-94a04a1a1b34",
+    "codigoProduto": "87dc43ae-2e64-4d82-835a-94a04a1a1b34",
     "nome": "Produto 29",
     "preco": 49.56
   },
   {
-    "id": "cf3e8c14-b563-47d5-9c72-d2c42e93c3fc",
+    "codigoProduto": "cf3e8c14-b563-47d5-9c72-d2c42e93c3fc",
     "nome": "Produto 30",
     "preco": 73.78
   },
   {
-    "id": "1b41d6ef-9a39-49f2-b78f-cd6b4bc9203b",
+    "codigoProduto": "1b41d6ef-9a39-49f2-b78f-cd6b4bc9203b",
     "nome": "Produto 31",
     "preco": 66.23
   },
   {
-    "id": "d3c8d1a7-d178-4d49-a8c4-cccad0b3c604",
+    "codigoProduto": "d3c8d1a7-d178-4d49-a8c4-cccad0b3c604",
     "nome": "Produto 32",
     "preco": 117.49
   },
   {
-    "id": "2b0e79e5-8e5a-4012-a635-06f9d722e2de",
+    "codigoProduto": "2b0e79e5-8e5a-4012-a635-06f9d722e2de",
     "nome": "Produto 33",
     "preco": 88.37
   },
   {
-    "id": "bc8ddab9-8eb0-4c47-8a21-6fd63745e8b5",
+    "codigoProduto": "bc8ddab9-8eb0-4c47-8a21-6fd63745e8b5",
     "nome": "Produto 34",
     "preco": 94.64
   },
   {
-    "id": "70e2d0b8-59f6-432d-8fc3-089a2aee9483",
+    "codigoProduto": "70e2d0b8-59f6-432d-8fc3-089a2aee9483",
     "nome": "Produto 35",
     "preco": 32.17
   },
   {
-    "id": "e11fbc74-1e2e-4f1e-924d-d07fa5d8c4d2",
+    "codigoProduto": "e11fbc74-1e2e-4f1e-924d-d07fa5d8c4d2",
     "nome": "Produto 36",
     "preco": 89.96
   },
   {
-    "id": "b91b805b-8e16-4298-81e4-7fc9c6c0e99b",
+    "codigoProduto": "b91b805b-8e16-4298-81e4-7fc9c6c0e99b",
     "nome": "Produto 37",
     "preco": 69.45
   },
   {
-    "id": "bdcbf5b7-dad2-4bb2-8d3e-82649641f6af",
+    "codigoProduto": "bdcbf5b7-dad2-4bb2-8d3e-82649641f6af",
     "nome": "Produto 38",
     "preco": 29.78
   },
   {
-    "id": "c2b76ec2-d8fc-4c0e-bf34-5c920908dcd7",
+    "codigoProduto": "c2b76ec2-d8fc-4c0e-bf34-5c920908dcd7",
     "nome": "Produto 39",
     "preco": 43.29
   },
   {
-    "id": "b0d22e15-1d2f-4ef1-9f9d-f255d1b3a16b",
+    "codigoProduto": "b0d22e15-1d2f-4ef1-9f9d-f255d1b3a16b",
     "nome": "Produto 40",
     "preco": 118.34
   }
