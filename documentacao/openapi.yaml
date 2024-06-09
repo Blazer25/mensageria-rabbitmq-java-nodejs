@@ -14,7 +14,7 @@ tags:
 paths:
   # Produtor [JAVA]
   /estoque:
-    post:
+    put:
       summary: Envia um produto com seu respectivo estoque
       description: Envia um produto com seu respectivo estoque
       tags:
@@ -64,7 +64,7 @@ paths:
           description: Erro interno do servidor
 
   /preco:
-    post:
+    put:
       summary: Envia um produto com seu respectivo preço
       description: Envia um produto com seu respectivo preço
       tags:
