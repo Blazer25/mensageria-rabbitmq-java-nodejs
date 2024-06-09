@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "generate-docs": "openapi-generator-cli generate -i documentacao/openapi.yaml -g html -o html"
+  },
+  "devDependencies": {
+    "swagger-ui-dist": "^5.17.14"
+  }
+}
