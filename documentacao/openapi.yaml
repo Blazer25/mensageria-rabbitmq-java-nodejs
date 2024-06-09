@@ -1,0 +1,114 @@
+openapi: 3.0.0
+info:
+  description: "Java com RabbitMQ"
+  version: "1.0.0"
+  title: "API Projeto Java com RabbitMQ"
+servers:
+  - url: http://localhost:8080
+    description: Servidor Produtor de mensagem [Java]
+
+tags:
+  - name: "produtos"
+    description: "Acesso a documentação que envolve a parte de envio de produtos da API."
+
+paths:
+  # Produtor [JAVA]
+  /estoque:
+    post:
+      summary: Envia um produto com seu respectivo estoque
+      description: Envia um produto com seu respectivo estoque
+      tags:
+        - produtos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                codigoProduto:
+                  type: string
+                  format: uuid
+                  description: Código do produto no formato uuidv4
+                  example: d290f1ee-6c54-4b01-90e6-d701748f0851
+                quantidade:
+                  type: integer
+                  description: Quantidade de produto consumida
+                  example: 2
+              required:
+                - codigoProduto
+                - quantidade
+      responses:
+        "200":
+          description: Requisição bem-sucedida
+        "400":
+          description: Requisição inválida
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "BAD_REQUEST"
+                  message:
+                    type: string
+                    example: "Erro de formatação JSON: Verifique seu JSON para que ele possua formatos adequados!"
+                  path:
+                    type: string
+                    example: "uri=/estoque"
+                  error:
+                    type: string
+                    example: "Erro do validar parâmetros... o campo quantidade deve ser um número inteiro"
+        "500":
+          description: Erro interno do servidor
+
+  /preco:
+    post:
+      summary: Envia um produto com seu respectivo preço
+      description: Envia um produto com seu respectivo preço
+      tags:
+        - produtos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                codigoProduto:
+                  type: string
+                  format: uuid
+                  description: Código do produto no formato uuidv4
+                  example: d290f1ee-6c54-4b01-90e6-d701748f0851
+                preco:
+                  type: number
+                  description: Preço do produto
+                  example: 2
+              required:
+                - codigoProduto
+                - quantidade
+      responses:
+        "200":
+          description: Requisição bem-sucedida
+        "400":
+          description: Requisição inválida
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "BAD_REQUEST"
+                  message:
+                    type: string
+                    example: "Erro de formatação JSON: Verifique seu JSON para que ele possua formatos adequados!"
+                  path:
+                    type: string
+                    example: "uri=/estoque"
+                  error:
+                    type: string
+                    example: "Erro do validar parâmetros... o campo codigoProduto deve estar no formato UUIDV4"
+        "500":
+          description: Erro interno do servidor
