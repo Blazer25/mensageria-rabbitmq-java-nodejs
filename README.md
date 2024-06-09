@@ -46,7 +46,7 @@ Antes de iniciar o projeto, certifique-se de ter as seguintes ferramentas instal
 
 1. Abra o projeto, vá até o repositório: `java-producer-estoque-preco`
 2. Execute o projeto Java pela IDE IntelliJ IDEA ou usando o comando `mvn spring-boot:run`
-3. Acesse a documentação da API para ter acesso aos endpoints que enviam dados dos produtos para esta aplicação.
+3. Acesse a documentação da API para ter acesso aos endpoints que enviam dados dos produtos para esta aplicação (https://github.com/Blazer25/mensageria-rabbitmq-java-nodejs/blob/master/documentacao/TUTORIAL.md).
 
 ### Backend - Receptor [JAVA]
 
