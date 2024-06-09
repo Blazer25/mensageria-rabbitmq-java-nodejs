@@ -8,12 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Classe de configuração para a configuração do RabbitMQ.
+ */
 @Configuration
 public class RabbitMQConfig {
 
     @Autowired
     private ConnectionFactory connectionFactory;
 
+    /**
+     * Método para criar e configurar o RabbitTemplate para a comunicação com o RabbitMQ.
+     * @return RabbitTemplate configurado.
+     */
     @Bean
     public RabbitTemplate rabbitTemplate() {
         RabbitTemplate template = new RabbitTemplate(connectionFactory);
@@ -27,6 +34,10 @@ public class RabbitMQConfig {
         return template;
     }
 
+    /**
+     * Método privado para enviar mensagens para a fila morta após um erro no envio.
+     * @param message A mensagem que deve ser enviada para a fila morta.
+     */
     private void enviarParaFilaMorta(Message message) {
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
         rabbitTemplate.send(RabbitMQConsts.FILA_MORTA, message);

@@ -4,8 +4,16 @@ import org.springframework.amqp.AmqpRejectAndDontRequeueException;
 import org.springframework.amqp.rabbit.support.ListenerExecutionFailedException;
 import org.springframework.util.ErrorHandler;
 
+/**
+ * Classe para tratamento de erros durante a execução de listeners RabbitMQ.
+ */
 public class ErroTratamento implements ErrorHandler {
 
+    /**
+     * Método para lidar com erros durante a execução de listeners RabbitMQ.
+     * @param t A exceção que ocorreu durante a execução.
+     * @throws AmqpRejectAndDontRequeueException Uma exceção para indicar que a mensagem não deve ser reenfileirada.
+     */
     @Override
     public void handleError(Throwable t) {
         String nomeDaFila = ((ListenerExecutionFailedException) t).getFailedMessage().getMessageProperties().getConsumerQueue();

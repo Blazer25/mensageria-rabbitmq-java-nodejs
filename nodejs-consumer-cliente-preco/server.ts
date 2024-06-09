@@ -22,6 +22,8 @@ app.use("/", rotas);
 app.listen(port, () => {
   try {
     console.log(`Servidor rodando na porta ${port}`);
+
+    //Se conecta com o RabbitMQ
     conectar();
   } catch (error) {
     console.log(error);
