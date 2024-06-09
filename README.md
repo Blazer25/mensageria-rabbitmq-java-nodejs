@@ -12,6 +12,10 @@ Além disso, há um frontend desenvolvido em React que lista os produtos (tanto 
 <br><br>
 Essa estrutura demonstra de forma clara e concisa como o fluxo de mensageria ocorre de maneira assíncrona, proporcionando uma visão abrangente do funcionamento do sistema.
 
+<br><br>
+
+> **ATENÇÃO:** Acesse a explicação sobre a documentação Swagger e fluxo/diagrama de atividade (UML) do projeto no seguinte link: https://github.com/Blazer25/mensageria-rabbitmq-java-nodejs/blob/master/documentacao/TUTORIAL.md.
+
 ## Visão Geral
 
 O projeto é dividido em quatro partes principais:
